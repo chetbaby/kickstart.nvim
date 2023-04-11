@@ -16,13 +16,13 @@ return {
   "JoosepAlviste/nvim-ts-context-commentstring", --for jsx comments
   "tpope/vim-surround",
   {
-		"akinsho/nvim-toggleterm.lua",
-		tag = "v2.*",
-		keys = { "<C-y>", "<leader>fl", "<leader>gt" },
-		config = function()
-			require("config/toggleterm")
-		end,
-	},
+    "akinsho/nvim-toggleterm.lua",
+    tag = "v2.*",
+    keys = { "<C-y>", "<leader>fl", "<leader>gt" },
+    config = function()
+      require("config/toggleterm")
+    end,
+  },
   {
     "numToStr/Comment.nvim",
     config = function()
@@ -37,7 +37,7 @@ return {
   },
   {
     "kevinhwang91/nvim-ufo",
-    dependencies = { "kevinhwang91/promise-async"},
+    dependencies = { "kevinhwang91/promise-async" },
     config = function()
       require("ufo").setup({
         provider_selector = function(bufnr, filetype, buftype)
@@ -83,7 +83,7 @@ return {
   {
     "norcalli/nvim-colorizer.lua",
     event = "BufReadPre",
-    config = function ()
+    config = function()
       require("colorizer").setup()
     end,
   },
@@ -100,10 +100,10 @@ return {
   {
     'rmagatti/auto-session',
     config = function()
-    require("auto-session").setup {
-      log_level = "error",
-      auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
-    }
+      require("auto-session").setup {
+        log_level = "error",
+        auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+      }
     end
   },
 }
