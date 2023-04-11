@@ -110,6 +110,10 @@ require('lazy').setup({
         changedelete = { text = '~' },
       },
     },
+    		config = function()
+			require("config/gitsigns")
+		end,
+
   },
 
   { -- Theme inspired by Atom
@@ -123,14 +127,19 @@ require('lazy').setup({
   { -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     -- See `:help lualine.txt`
-    opts = {
-      options = {
-        icons_enabled = false,
-        theme = 'onedark',
-        component_separators = '|',
-        section_separators = '',
-      },
-    },
+    		config = function()
+			require("config/lualine")
+		end,
+		event = "VimEnter",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+    -- opts = {
+    --   options = {
+    --     icons_enabled = false,
+    --     theme = 'onedark',
+    --     component_separators = '|',
+    --     section_separators = '',
+    --   },
+    -- },
   },
 
   { -- Add indentation guides even on blank lines
@@ -288,7 +297,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'help', 'vim' },
+  ensure_installed = { 'lua', 'luadoc', 'vim', 'vimdoc', 'bash', 'comment', 'css', 'diff', 'git_rebase', 'gitcommit', 'go', 'graphql', 'html', 'java', 'javascript', 'jsdoc', 'json', 'markdown', 'python', 'regex', 'ruby', 'scss', 'tsx', 'typescript', 'yaml' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = false,
@@ -379,7 +388,7 @@ local on_attach = function(_, bufnr)
   nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
   nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
   nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
-  nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
+  -- nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
   nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
   nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
@@ -493,5 +502,28 @@ cmp.setup {
   },
 }
 
+--[[ vim.keymap.set('n', '<leader>j', "<C-w>l", { expr = true, silent = true }) ]]
+--[[ vim.keymap.set("", "<leader>Q", ":qa!<CR>", { noremap = true, silent = true }) ]]
+--[[ vim.keymap.set("", "<leader>w", ":noa w<CR>", { noremap = true, silent = true }) ]]
+vim.keymap.set("", "<leader>q", ":BD<CR>", { noremap = true, silent = true })
+--[[ vim.keymap.set("", "<leader>j", "<C-w><C-w>", {noremap = true, silent = true} ) -- next split ]]
+--[[ vim.keymap.set("", "<leader>J", "<C-w>p", {noremap = true, silent = true} ) -- next split ]]
+--[[ vim.keymap.set("", "Y", "y$", {noremap = true, silent = true} ) -- select to end of line ]]
+--[[ vim.keymap.set("n", "L", "15j", {noremap = true, silent = true} ) ]]
+--[[ vim.keymap.set("n", "H", "15k", {noremap = true, silent = true} ) ]]
+--[[ vim.keymap.set("n", "U", "<C-r>", {noremap = true, silent = true} ) -- redo ]]
+--[[ vim.keymap.set("", "E", "$", {noremap = true, silent = true} ) -- end of line ]]
+--[[ vim.keymap.set("", "B", "^", {noremap = true, silent = true} ) -- beginnning of line ]]
+--[[ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {noremap = true, silent = true} ) -- move selected line up ]]
+--[[ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {noremap = true, silent = true} ) -- move selected line down ]]
+--[[ vim.keymap.set("", "n", "nzzzv", {noremap = true, silent = true} ) ]]
+--[[ vim.keymap.set("", "N", "Nzzzv", {noremap = true, silent = true} ) ]]
+--[[]]
+--[[ vim.keymap.set("n", "\\", ":NvimTreeToggle<CR>") ]]
+
+-- require("colorscheme")
+require("settings")
+require("keymaps")
+-- require("plugins")
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
