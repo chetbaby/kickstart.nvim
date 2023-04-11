@@ -502,28 +502,13 @@ cmp.setup {
   },
 }
 
---[[ vim.keymap.set('n', '<leader>j', "<C-w>l", { expr = true, silent = true }) ]]
---[[ vim.keymap.set("", "<leader>Q", ":qa!<CR>", { noremap = true, silent = true }) ]]
---[[ vim.keymap.set("", "<leader>w", ":noa w<CR>", { noremap = true, silent = true }) ]]
+
 vim.keymap.set("", "<leader>q", ":BD<CR>", { noremap = true, silent = true })
---[[ vim.keymap.set("", "<leader>j", "<C-w><C-w>", {noremap = true, silent = true} ) -- next split ]]
---[[ vim.keymap.set("", "<leader>J", "<C-w>p", {noremap = true, silent = true} ) -- next split ]]
---[[ vim.keymap.set("", "Y", "y$", {noremap = true, silent = true} ) -- select to end of line ]]
---[[ vim.keymap.set("n", "L", "15j", {noremap = true, silent = true} ) ]]
---[[ vim.keymap.set("n", "H", "15k", {noremap = true, silent = true} ) ]]
---[[ vim.keymap.set("n", "U", "<C-r>", {noremap = true, silent = true} ) -- redo ]]
---[[ vim.keymap.set("", "E", "$", {noremap = true, silent = true} ) -- end of line ]]
---[[ vim.keymap.set("", "B", "^", {noremap = true, silent = true} ) -- beginnning of line ]]
---[[ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {noremap = true, silent = true} ) -- move selected line up ]]
---[[ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {noremap = true, silent = true} ) -- move selected line down ]]
---[[ vim.keymap.set("", "n", "nzzzv", {noremap = true, silent = true} ) ]]
---[[ vim.keymap.set("", "N", "Nzzzv", {noremap = true, silent = true} ) ]]
---[[]]
---[[ vim.keymap.set("n", "\\", ":NvimTreeToggle<CR>") ]]
 
 -- require("colorscheme")
 require("settings")
 require("keymaps")
 -- require("plugins")
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
