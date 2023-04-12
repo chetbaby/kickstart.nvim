@@ -57,13 +57,13 @@ keymap("", "<leader>ee", "<C-w>=", noshow)
 
 -- MOVEMENT
 keymap("", "<leader>j", "<C-w><C-w>", noshow) -- next split
-keymap("", "<leader>J", "<C-w>p", noshow) -- next split
-keymap("", "Y", "y$", noshow) -- select to end of line
+keymap("", "<leader>J", "<C-w>p", noshow)     -- next split
+keymap("", "Y", "y$", noshow)                 -- select to end of line
 keymap("n", "L", "15j", noshow)
 keymap("n", "H", "15k", noshow)
-keymap("n", "U", "<C-r>", noshow) -- redo
-keymap("", "E", "$", noshow) -- end of line
-keymap("", "B", "^", noshow) -- beginnning of line
+keymap("n", "U", "<C-r>", noshow)            -- redo
+keymap("", "E", "$", noshow)                 -- end of line
+keymap("", "B", "^", noshow)                 -- beginnning of line
 keymap("v", "J", ":m '>+1<CR>gv=gv", noshow) -- move selected line up
 keymap("v", "K", ":m '<-2<CR>gv=gv", noshow) -- move selected line down
 keymap("", "n", "nzzzv", noshow)
@@ -127,6 +127,7 @@ keymap("", "<leader>nb", ":G checkout -b", show)
 keymap("", "<leader>res", ":G reset --hard", show)
 -- keymap("", "<leader>rr", ":G checkout --<CR>", show)
 keymap("", "<leader>sta", ":G stash --index<CR>", show)
+keymap("", "<leader>pp", ":G stash pop<CR>", show)
 -- keymap("", "<leader>dif", ":SignifyDiff<CR>", noshow) -- another lua dif plugin?
 -- keymap("", "<leader>mf", ":diffget //2<CR>", show) -- diff stuff i don't use
 -- keymap("", "<leader>mj", ":diffget //3<CR>", show) -- diff stuff i don't use
