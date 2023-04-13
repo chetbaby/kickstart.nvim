@@ -124,7 +124,7 @@ keymap("", "<leader>up", ":G push -u origin<CR>", show)
 keymap("", "<leader>chk", ":G checkout<CR>", show)
 keymap("", "<leader>nb", ":G checkout -b", show)
 -- keymap("", "<leader>br", ":G branch<CR>", show) -- telescope?
-keymap("", "<leader>res", ":G reset --hard", show)
+keymap("", "<leader>res", ":Gread<CR>", show)
 -- keymap("", "<leader>rr", ":G checkout --<CR>", show)
 keymap("", "<leader>sta", ":G stash --index<CR>", show)
 keymap("", "<leader>pp", ":G stash pop<CR>", show)
