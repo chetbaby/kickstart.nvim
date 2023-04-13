@@ -26,7 +26,7 @@ vim.api.nvim_set_keymap("n", "<Leader>x", ":helloooo dere", show) --stupid examp
 keymap("", "<leader>V", "+y", noshow)
 keymap("", "gq", "<esc>:q<CR>", noshow)
 keymap("", "<leader>hub", ":!hub sync<CR>", noshow)
-keymap("", "<leader>yre", ":!yarn relay<CR>", noshow)
+--[[ keymap("", "<leader>yre", ":!yarn relay<CR>", noshow) ]]
 
 -- QF LIST
 keymap("", "<leader><leader>c", ":ccl<CR>", noshow)
