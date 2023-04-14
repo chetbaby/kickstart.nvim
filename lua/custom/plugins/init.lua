@@ -16,6 +16,12 @@ return {
   "JoosepAlviste/nvim-ts-context-commentstring", --for jsx comments
   "tpope/vim-surround",
   {
+    "luukvbaal/statuscol.nvim",
+    config = function()
+      require("config/statuscol")
+    end,
+  },
+  {
     "akinsho/nvim-toggleterm.lua",
     tag = "v2.*",
     keys = { "<C-y>", "<leader>fl", "<leader>gt" },
@@ -39,16 +45,7 @@ return {
     "kevinhwang91/nvim-ufo",
     dependencies = { "kevinhwang91/promise-async" },
     config = function()
-      require("ufo").setup({
-        provider_selector = function(bufnr, filetype, buftype)
-          vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
-          vim.o.foldcolumn = '5'
-          vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
-          vim.o.foldlevelstart = 99
-          vim.o.foldenable = true
-          return { "treesitter", "indent" }
-        end,
-      })
+      require("config/ufo")
     end,
   },
   {

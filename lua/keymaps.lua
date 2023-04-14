@@ -45,7 +45,7 @@ keymap("", "<S-Tab>", ":bprevious<CR>", noshow)
 keymap("", "<esc>", ":noh<CR>", noshow)
 keymap("", "<leader>Q", ":qa!<CR>", noshow)
 keymap("", ";", ":", show)
-keymap("", "<leader>w", ":noa w<CR>", noshow)
+keymap("", "<leader>w", ":noa w<CR><esc>", noshow)
 keymap("", "<leader>W", ":w<CR>", noshow)
 keymap("", "<leader>pw", ":pwd<CR>", noshow)
 
