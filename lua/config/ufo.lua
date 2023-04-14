@@ -17,4 +17,3 @@ require('ufo').setup({
 		return { 'treesitter', 'indent' }
 	end
 })
---
