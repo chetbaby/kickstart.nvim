@@ -9,7 +9,6 @@ return {
   "morhetz/gruvbox",
   "romainl/vim-qf",
   "alvan/vim-closetag",
-  "alvan/vim-closetag",
   "AndrewRadev/tagalong.vim",
   "jiangmiao/auto-pairs",
   "Valloric/MatchTagAlways",
