@@ -134,6 +134,7 @@ keymap("", "<leader>pp", ":G stash pop<CR>", show)
 keymap("", "<leader>G", ":15split | Gedit :<CR>", show)
 keymap("", "<leader>hub", ":GBrowse<CR>", noshow)
 keymap("", "<leader><leader>res", ":Gread<CR>", noshow)
+keymap("", "<leader>pr", ":Gitsigns preview_hunk<CR>", noshow)
 -- LSP
 -- keymap('n', 'gd', ':lua vim.lsp.buf.definition()<cr>', noshow)
 -- keymap('n', 'gD', ':lua vim.lsp.buf.declaration()<cr>', noshow)
