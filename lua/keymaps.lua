@@ -11,7 +11,7 @@ vim.api.nvim_set_keymap("n", "<Space>", "<NOP>", show)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.api.nvim_set_keymap("n", "<Leader>x", ":helloooo dere", show) --stupid example
+vim.keymap.set("n", "<Leader>x", ":helloooo dere") --stupid example
 
 -- Modes
 --   Normal, Visual, Select, Operator-pending = '',
@@ -113,6 +113,8 @@ keymap("n", "<M-Left>", ":vertical resize -2<CR>", noshow)
 keymap("n", "<M-Right>", ":vertical resize +2<CR>", noshow)
 
 -- GIT SHIT
+vim.keymap.set('n', '<leader>bc', require('telescope.builtin').git_bcommits, { desc = 'Buffer Commits' })
+vim.keymap.set('n', '<leader>co', require('telescope.builtin').git_commits, { desc = 'Buffer Commits' })
 -- keymap("", "<leader>cm", ":BCommits<CR>", noshow) -- telescope
 -- keymap("", "<leader><leader>g", ":Git<CR>", show)
 keymap("", "<leader>gb", ":G blame<CR>", show)
