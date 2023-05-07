@@ -14,6 +14,12 @@ return {
   "Valloric/MatchTagAlways",
   "JoosepAlviste/nvim-ts-context-commentstring", --for jsx comments
   "tpope/vim-surround",
+  "jose-elias-alvarez/typescript.nvim",
+  {
+    "Fildo7525/pretty_hover",
+    event = "LspAttach",
+    opts = {}
+  },
   {
     "luukvbaal/statuscol.nvim",
     config = function()
