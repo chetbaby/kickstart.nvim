@@ -180,6 +180,7 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
+      'JoosepAlviste/nvim-ts-context-commentstring',
     },
     config = function()
       pcall(require('nvim-treesitter.install').update { with_sync = true })
@@ -301,6 +302,9 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
+  context_commentstring = {
+    enable = true,
+  },
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = { 'lua', 'luadoc', 'vim', 'vimdoc', 'bash', 'comment', 'css', 'diff', 'git_rebase', 'gitcommit',
     'go', 'graphql', 'html', 'java', 'javascript', 'jsdoc', 'json', 'markdown', 'python', 'regex', 'ruby', 'scss', 'tsx',
