@@ -63,7 +63,7 @@ require("nvim-tree").setup({
 		--[[ enabled = true, ]]
 		--[[ icon = { hint = "", info = "", warning = "", error = "" }, ]]
 	},
-	git = { ignore = true },
+	git = { ignore = false },
 	-- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
 	update_focused_file = {
 		-- enables the feature
